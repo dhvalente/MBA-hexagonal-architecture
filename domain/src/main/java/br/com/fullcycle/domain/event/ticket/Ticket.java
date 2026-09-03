@@ -66,6 +66,14 @@ public class Ticket {
         return status;
     }
 
+    public void cancel() {
+        if (this.status == TicketStatus.CANCELLED) {
+            return;
+        }
+
+        this.status = TicketStatus.CANCELLED;
+    }
+
     public Instant paidAt() {
         return paidAt;
     }
